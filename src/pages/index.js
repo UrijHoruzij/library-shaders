@@ -1,29 +1,27 @@
-import * as React from "react"
-import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
+import * as React from "react";
+import { Link } from "gatsby";
+import styled from "styled-components";
+import { Layout, Seo, Shader1 } from "../components/";
+import Image from "../images/1.jpg";
+import Mask from "../images/mask.png";
 
-import Layout from "../components/layout"
-import Seo from "../components/seo"
-
+const Grid = styled.div`
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: repeat(auto-fill, 25%);
+`;
+const LinkCard = styled(Link)`
+  text-decoration: none;
+`;
 const IndexPage = () => (
   <Layout>
     <Seo title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <StaticImage
-      src="../images/gatsby-astronaut.png"
-      width={300}
-      quality={95}
-      formats={["AUTO", "WEBP", "AVIF"]}
-      alt="A Gatsby astronaut"
-      style={{ marginBottom: `1.45rem` }}
-    />
-    <p>
-      <Link to="/page-2/">Go to page 2</Link> <br />
-      <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
-    </p>
+    <Grid>
+      <LinkCard to="/shader1">
+        <Shader1 width={600} height={700} image={Image} mask={Mask}></Shader1>
+      </LinkCard>
+    </Grid>
   </Layout>
-)
+);
 
-export default IndexPage
+export default IndexPage;
