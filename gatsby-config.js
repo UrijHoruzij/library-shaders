@@ -1,6 +1,6 @@
 module.exports = {
   pathPrefix: `/library-shaders`,
-  assetPrefix: `/`,
+  // assetPrefix: `/`,
   siteMetadata: {
     title: `Shaders library`,
     description: `Shaders library`,
