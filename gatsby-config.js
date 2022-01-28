@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: `/library-shaders`,
   siteMetadata: {
     title: `Shaders library`,
     description: `Shaders library`,
